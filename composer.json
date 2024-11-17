@@ -1,0 +1,43 @@
+{
+    "name": "jacobtilly/larafort",
+    "description": "A package to provide a simple way to connect Laravel to Fortnox.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jacob Tilly",
+            "email": "dev@jacobtilly.com",
+            "homepage": "https://jacobtilly.com"
+        }
+    ],
+    "homepage": "https://github.com/jacobtilly/larafort",
+    "keywords": ["Laravel", "LaraFort"],
+    "require": {
+        "illuminate/support": "^11.0",
+        "guzzlehttp/guzzle": "^7.8",
+        "beyondcode/expose": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "orchestra/testbench": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JacobTilly\\LaraFort\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JacobTilly\\LaraFort\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JacobTilly\\LaraFort\\LaraFortServiceProvider"
+            ],
+            "aliases": {
+                "LaraFort": "JacobTilly\\LaraFort\\Facades\\LaraFort"
+            }
+        }
+    }
+}
